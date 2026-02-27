@@ -141,20 +141,15 @@ function calculateTotal(items) {
 ---
 
 - (**Vector/Matrix**) Use LaTeX syntax for matrices. Only use `\begin{bmatrix} ... \end{bmatrix}` for matrices, and `\begin{pmatrix} ... \end{pmatrix}` is forbidden.
-  - Example: The state vector can be represented as a column matrix:
-  
+  - Example: Hilbert matrix \( H_n \) is defined as:
     \[
-    \begin{bmatrix}
-    \psi_1 \alpha_1 & \psi_2 \alpha_2 & \psi_3 \alpha_3 \\
-    \psi_2 \alpha_1 & \psi_3 \alpha_2 & \psi_1 \alpha_3 \\
-    \psi_3 \alpha_1 & \psi_1 \alpha_2 & \psi_2 \alpha_3
-    \end{bmatrix}
+    H_n = \begin{pmatrix}
+    1           & \frac{1}{2}    & \dots & \frac{1}{n}    \\
+    \frac{1}{2} & \frac{1}{3}    & \dots & \frac{1}{n+1}  \\
+    \vdots      & \vdots         & \ddots& \vdots         \\
+    \frac{1}{n} & \frac{1}{n+1}  & \dots & \frac{1}{2n-1}
+    \end{pmatrix}
     \]
-
-$\begin{pmatrix} a & b \\
- c & d \end{pmatrix}$
-$\begin{bmatrix} a & b \\
- c & d \end{bmatrix}$
 
 ---
 
