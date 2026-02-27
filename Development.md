@@ -40,10 +40,10 @@
 
 ---
 
-- (**Code**) Use
+- (**Code**) Use templates like:
 
-  ````markdown
-  ```language
+  ````markdown{.line-numbers}
+  ```language{.line-numbers}
   Code block
   ```
   ````
@@ -52,20 +52,22 @@
 
 - Example:
 
-    ```python
+    ```python{.line-numbers}
     def my_function():
         print("Hello World")
     ```
 
 ---
 
-- (**Links**) Use `[Text](URL)` for hyperlinks.
+- (**Links**) Use `[Text](URL)` for hyperlinks. Use `<URL>` for plain URLs.
   - Example: [CriticalLine's GitHub](https://github.com/CriticalLine)
+  - Example: <https://www.example.com>
 
 ---
 
 - (**Images**) Use `![Figure Index: Captain](Image URL)` for images.
-  - Example: ![Figure 1-1: Schrödinger's Cat](https://www.runoob.com/wp-content/uploads/2019/03/3ce97b07-7191-4aba-8778-3f2e09dfea80.png)
+  - Example:
+  ![Figure 1-1: XBOX](https://www.microsoftestore.com.hk/resource/images/cms/explore_microsoft/2020/11/06/a68beb04-6b24-490d-87ae-09f87aed4601.jpg)
 
 ---
 
@@ -75,6 +77,12 @@
 ---
 
 - (**Tables**) Use Markdown table syntax for tabular data.
+  - Example:
+  
+    | Column 1 | Column 2 | Column 3 |
+    |----------|----------|----------|
+    | Data 1   | Data 2   | Data 3   |
+    | Data 4   | Data 5   | Data 6   |
 
 ---
 
@@ -84,6 +92,79 @@
     - [x] Define scope
 
 ---
+
+- (**Diffs**) Use `diff` syntax for code changes, with `-` for deletions and `+` for additions.
+  - Example:
+
+```diff
+function calculateTotal(items) {
+-   let total = 0;
++   let total = 0.0;
+    
+    for (let item of items) {
+-       total += item.price;
++       total += parseFloat(item.price);
+    }
+    
++   // Round to 2 decimal places
++   total = Math.round(total * 100) / 100;
+    return total;
+}
+```
+
+---
+
+- (**Mermaid Diagrams**) Use Mermaid syntax for diagrams.
+  - Example:
+
+    ```mermaid
+      graph TD
+          A[Begin] --> B{Condition}
+          B -->|Yes| C[Execute Operation A]
+          B -->|No| D[Execute Operation B]
+          C --> E[End]
+          D --> E
+      ```
+
+    ```mermaid
+        classDiagram
+        classA <|-- classB : implements
+        classC *-- classD : composition
+        classE o-- classF : aggregation
+      ```
+
+---
+
+- (**Comments**) Use `<!-- Comment -->` for comments that will not be rendered in the final output.
+  - Example: <!-- This is a comment and will not appear in the rendered document -->
+
+---
+
+- (**Vector/Matrix**) Use LaTeX syntax for matrices. Only use `\begin{bmatrix} ... \end{bmatrix}` for matrices, and `\begin{pmatrix} ... \end{pmatrix}` is forbidden.
+  - Example: The state vector can be represented as a column matrix:
+  
+    \[
+    \begin{bmatrix}
+    \psi_1 \alpha_1 & \psi_2 \alpha_2 & \psi_3 \alpha_3 \\
+    \psi_2 \alpha_1 & \psi_3 \alpha_2 & \psi_1 \alpha_3 \\
+    \psi_3 \alpha_1 & \psi_1 \alpha_2 & \psi_2 \alpha_3
+    \end{bmatrix}
+    \]
+
+$\begin{pmatrix} a & b \\
+ c & d \end{pmatrix}$
+$\begin{bmatrix} a & b \\
+ c & d \end{bmatrix}$
+
+---
+
+- (**Escape**) Use `\` to escape special characters when necessary.
+  - Example: To display \*, use `\*` to escape it.
+  - Example: To display \\, use `\\` to escape it.
+  - Example: To display \#, use `\#` to escape it.
+  - Example: To display \$, use `\$` to escape it.
+
+❌Forbidden: Footnotes, all kinds of horizontal line `---`.
 
 ##### Style Guidelines
 
