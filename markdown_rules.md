@@ -172,6 +172,8 @@ function calculateTotal(items) {
 
 ❌Forbidden: Footnotes, all kinds of horizontal line `---`.
 
+---
+
 ## Style Guidelines
 
 ---
@@ -229,6 +231,24 @@ Not allowed:
 ---
 
 -
+
+<div style="padding: 15px; background-color: #E3F2FD; border-left: 5px solid #2196F3; margin: 15px 0;">
+💡 Info: This is an informational box with custom styling to highlight important information.
+</div>
+<div style="padding: 15px; background-color: #FFF3E0; border-left: 5px solid #FF9800; margin: 15px 0;">
+⚠️ Warning: This is a warning box used to alert users to important information.
+</div>
+<div style="padding: 15px; background-color: #F1F8E9; border-left: 5px solid #8BC34A; margin: 15px 0;">
+✅ Success: This is a success box used to indicate successful operations.
+</div>
+
+<div style="padding: 15px; background-color: #FFEBEE; border-left: 5px solid #F44336; margin: 15px 0;">
+❌ Error: This is an error box used to indicate problems or issues.
+</div>
+
+<div style="padding: 15px; background-color: #e6fffffe; border-left: 5px solid rgb(25, 247, 255); margin: 15px 0;">
+  🆕 New Feature: This is a new feature box used to highlight newly added features.
+</div>
 
 ---
 
