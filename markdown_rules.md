@@ -178,11 +178,13 @@ function calculateTotal(items) {
 
 ---
 
-Allowed colors of text: red,
-Not allowed: yellow
+Allowed colors of text (default = black): red, blue, green
+Not allowed: yellow, white
 
-Allowed colors of background:
-Not allowed:
+Allowed colors of background: yellow (=<mark></mark>), lime
+Not allowed: blue, green, black, maroon, navy, purple, brown, olive, teal, indigo, silver,
+
+Not allowed both for text and background: mint, azure, grey, beige, salmon, blackkhaki and all other colors not allowed above.
 
 - (**Colored Text**) Use HTML `<span style="color:color;">Text</span>` for colored text, where `color` can be a color name or hex code.
   - Example: <span style="color:red;">This text is red.</span>
@@ -194,38 +196,27 @@ Not allowed:
 - (**Colored text in KaTex**) Use `\color{color}{Text}` for colored text in KaTex, where `color` can be a color name or hex code.
   - Example: The equation \( \color{red}{E = mc^2} \) is famous.
 
-<span style="color:red;">Test text测试文本</span>
-<span style="color:blue;">Test text测试文本</span>
-<span style="color:green;">Test text测试文本</span>
-<span style="color:yellow;">Test text测试文本</span>
-<span style="color:black;background-color:yellow;">Test text测试文本</span>=<mark>Text</mark>
-<span style="color:purple;">Test text测试文本</span>
-<span style="color:orange;">Test text测试文本</span>
-<span style="color:black;background-color:pink;">Test text测试文本</span>
-<span style="color:brown;">Test text测试文本</span>
-<span style="color:gray;">Test text测试文本</span>
-<span style="color:black;background-color:cyan;">Test text测试文本</span>
-<span style="color:magenta;">Test text测试文本</span>
-<span style="color:black;background-color:lime;">Test text测试文本</span>
 <span style="color:maroon;">Test text测试文本</span>
-<span style="color:navy;">Test text测试文本</span>
-<span style="color:olive;">Test text测试文本</span>
-<span style="color:teal;">Test text测试文本</span>
-<span style="color:violet;">Test text测试文本</span>
-<span style="color:indigo;">Test text测试文本</span>
-<span style="color:gold;">Test text测试文本</span>
-<span style="color:silver;">Test text测试文本</span>
+
+<span style="color:black;background-color:purple;">Test text测试文本</span>
+<span style="color:black;background-color:orange;">Test text测试文本</span>
+<span style="color:black;background-color:pink;">Test text测试文本</span>
+<span style="color:black;background-color:brown;">Test text测试文本</span>
+<span style="color:black;background-color:cyan;">Test text测试文本</span>
+<span style="color:black;background-color:magenta;">Test text测试文本</span>
+<span style="color:black;background-color:navy;">Test text测试文本</span>
+<span style="color:black;background-color:olive;">Test text测试文本</span>
+<span style="color:black;background-color:teal;">Test text测试文本</span>
+<span style="color:black;background-color:violet;">Test text测试文本</span>
+<span style="color:black;background-color:indigo;">Test text测试文本</span>
+<span style="color:black;background-color:gold;">Test text测试文本</span>
+<span style="color:black;background-color:silver;">Test text测试文本</span>
 <span style="color:coral;">Test text测试文本</span>
 <span style="color:turquoise;">Test text测试文本</span>
-<span style="color:salmon;">Test text测试文本</span>
-<span style="color:plum;">Test text测试文本</span>
+<span style="color:black;background-color:plum;">Test text测试文本</span>
 <span style="color:orchid;">Test text测试文本</span>
 <span style="color:black;background-color:tan;">Test text测试文本</span>
-<span style="color:black;background-color:blackkhaki;">Test text测试文本</span>
 <span style="color:black;background-color:lavender;">Test text测试文本</span>
-<span style="color:black;background-color:beige;">Test text测试文本</span>
-<span style="color:mint;">Test text测试文本</span>delete
-<span style="color:black;background-color:azure;">Test text测试文本</span>delete
 <span style="color:black;background-color:chartreuse;">Test text测试文本</span>
 
 ---
@@ -265,3 +256,6 @@ Not allowed:
 </div>
 
 ---
+
+- `[TOC]`should place the first line of the document before the `#` title.
+- 
