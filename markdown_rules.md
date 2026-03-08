@@ -170,6 +170,11 @@ function calculateTotal(items) {
 
 ---
 
+- (**Centering Content**) Use `<div style="text-align: center;">Content</div>` to center content. Use `<center>Content</center>` is prohibited.
+  - Example: <div style="text-align: center;">This text is centered.</div>
+
+---
+
 ❌Forbidden: Footnotes, all kinds of horizontal line `---`.
 
 ---
@@ -187,8 +192,8 @@ Example:
 <span style="color:green;">TEST TEXT: You can use green for text.</span>
 <span style="color:coral;">TEST TEXT: You can use coral for text.</span>
 
-Allowed colors of background: yellow (=<mark></mark>), lime, cyan, lightpink
-Not allowed: blue, green, black, maroon, olive, teal, indigo, silver,
+Allowed colors of background: yellow (=`<mark></mark>`), lime, cyan, lightpink
+Not allowed: blue, green, black
 
 Example:
 <span style="color:black;background-color:yellow;">TEST TEXT: You can use yellow for background.</span>
@@ -200,6 +205,14 @@ Waitlist of colors: chartreuse (lime), pink (lightpink), salmon (coral)
 
 Not allowed both for text and background: brown, purple, grey, beige, salmon, navy, blackkhaki and all other colors not allowed above.
 
+<span style="color:orange;">Test Not allowed both for text and background: brown, purple, grey, beige, salmon, navy, blackkhaki and all other colors not allowed above.</span>
+<span style="color:magenta;">Test Not allowed both for text and background: brown, purple, grey, beige, salmon, navy, blackkhaki and all other colors not allowed above.</span>
+<span style="color:black;background-color:violet;">Test Not allowed both for text and background: brown, purple, grey, beige, salmon, navy, blackkhaki and all other colors not allowed above.</span>
+<span style="color:black;background-color:gold;">Test Not allowed both for text and background: brown, purple, grey, beige, salmon, navy, blackkhaki and all other colors not allowed above.</span>
+<span style="color:black;background-color:plum;">Test Not allowed both for text and background: brown, purple, grey, beige, salmon, navy, blackkhaki and all other colors not allowed above.</span>
+
+---
+
 - (**Colored Text**) Use HTML `<span style="color:color;">Text</span>` for colored text, where `color` can be a color name or hex code.
   - Example: <span style="color:red;">This text is red.</span>
   1. (**Red**) Use red for warnings or important notes.
@@ -210,18 +223,10 @@ Not allowed both for text and background: brown, purple, grey, beige, salmon, na
 - (**Colored text in KaTex**) Use `\color{color}{Text}` for colored text in KaTex, where `color` can be a color name or hex code.
   - Example: The equation \( \color{red}{E = mc^2} \) is famous.
 
-<span style="color:black;background-color:orange;">Test text</span>
-<span style="color:black;background-color:magenta;">Test text</span>
-<span style="color:black;background-color:violet;">Test text</span>
-<span style="color:black;background-color:gold;">Test text</span>
-<span style="color:turquoise;">Test text</span>
-<span style="color:black;background-color:plum;">Test text</span>
-<span style="color:orchid;">Test text</span>
-<span style="color:black;background-color:tan;">Test text</span>
-
 ---
 
--
+- (**Colored Blocks**) Use HTML `<div style="background-color:color; padding: 10px; border-left: 5px solid borderColor;">Content</div>` for colored blocks, where `color` is the background color and `borderColor` is the color of the left border.
+  - Example:
 
 <div style="padding: 15px; background-color: #E3F2FD; border-left: 5px solid #2196F3; margin: 15px 0;">
 💡 Info: This is an informational box with custom styling to highlight important information.
