@@ -178,13 +178,27 @@ function calculateTotal(items) {
 
 ---
 
-Allowed colors of text (default = black): red, blue, green
+Allowed colors of text (default = black): red, blue, green, coral
 Not allowed: yellow, white
 
-Allowed colors of background: yellow (=<mark></mark>), lime
-Not allowed: blue, green, black, maroon, navy, purple, brown, olive, teal, indigo, silver,
+Example:
+<span style="color:red;">TEST TEXT: You can use red for text.</span>
+<span style="color:blue;">TEST TEXT: You can use blue for text.</span>
+<span style="color:green;">TEST TEXT: You can use green for text.</span>
+<span style="color:coral;">TEST TEXT: You can use coral for text.</span>
 
-Not allowed both for text and background: mint, azure, grey, beige, salmon, blackkhaki and all other colors not allowed above.
+Allowed colors of background: yellow (=<mark></mark>), lime, cyan, lightpink
+Not allowed: blue, green, black, maroon, olive, teal, indigo, silver,
+
+Example:
+<span style="color:black;background-color:yellow;">TEST TEXT: You can use yellow for background.</span>
+<span style="color:black;background-color:lime;">TEST TEXT: You can use lime for background.</span>
+<span style="color:black;background-color:cyan;">TEST TEXT: You can use cyan for background.</span>
+<span style="color:black;background-color:lightpink;">TEST TEXT: You can use light red for background.</span>
+
+Waitlist of colors: chartreuse (lime), pink (lightpink), salmon (coral)
+
+Not allowed both for text and background: brown, purple, grey, beige, salmon, navy, blackkhaki and all other colors not allowed above.
 
 - (**Colored Text**) Use HTML `<span style="color:color;">Text</span>` for colored text, where `color` can be a color name or hex code.
   - Example: <span style="color:red;">This text is red.</span>
@@ -196,28 +210,14 @@ Not allowed both for text and background: mint, azure, grey, beige, salmon, blac
 - (**Colored text in KaTex**) Use `\color{color}{Text}` for colored text in KaTex, where `color` can be a color name or hex code.
   - Example: The equation \( \color{red}{E = mc^2} \) is famous.
 
-<span style="color:maroon;">Test text测试文本</span>
-
-<span style="color:black;background-color:purple;">Test text测试文本</span>
-<span style="color:black;background-color:orange;">Test text测试文本</span>
-<span style="color:black;background-color:pink;">Test text测试文本</span>
-<span style="color:black;background-color:brown;">Test text测试文本</span>
-<span style="color:black;background-color:cyan;">Test text测试文本</span>
-<span style="color:black;background-color:magenta;">Test text测试文本</span>
-<span style="color:black;background-color:navy;">Test text测试文本</span>
-<span style="color:black;background-color:olive;">Test text测试文本</span>
-<span style="color:black;background-color:teal;">Test text测试文本</span>
-<span style="color:black;background-color:violet;">Test text测试文本</span>
-<span style="color:black;background-color:indigo;">Test text测试文本</span>
-<span style="color:black;background-color:gold;">Test text测试文本</span>
-<span style="color:black;background-color:silver;">Test text测试文本</span>
-<span style="color:coral;">Test text测试文本</span>
-<span style="color:turquoise;">Test text测试文本</span>
-<span style="color:black;background-color:plum;">Test text测试文本</span>
-<span style="color:orchid;">Test text测试文本</span>
-<span style="color:black;background-color:tan;">Test text测试文本</span>
-<span style="color:black;background-color:lavender;">Test text测试文本</span>
-<span style="color:black;background-color:chartreuse;">Test text测试文本</span>
+<span style="color:black;background-color:orange;">Test text</span>
+<span style="color:black;background-color:magenta;">Test text</span>
+<span style="color:black;background-color:violet;">Test text</span>
+<span style="color:black;background-color:gold;">Test text</span>
+<span style="color:turquoise;">Test text</span>
+<span style="color:black;background-color:plum;">Test text</span>
+<span style="color:orchid;">Test text</span>
+<span style="color:black;background-color:tan;">Test text</span>
 
 ---
 
@@ -258,4 +258,4 @@ Not allowed both for text and background: mint, azure, grey, beige, salmon, blac
 ---
 
 - `[TOC]`should place the first line of the document before the `#` title.
-- 
+-
