@@ -1,3 +1,9 @@
+Title: Dirac Notation and the Stern-Gerlach Experiment
+Authors: CriticalLine
+Date: 2026-03-14
+Tags: [spin, dirac, intro]
+Status: draft
+
 [TOC] <!-- TOC at front of the document -->
 
 # Dirac Notation and the Stern-Gerlach Experiment
@@ -7,6 +13,13 @@
 In the early 20th century, physicists discovered that classical physics (the rules that work for everyday objects) completely fails to describe tiny things like atoms and electrons. The new theory, **quantum mechanics**, is much richer and applies to a vast range of phenomena.
 
 Instead of following the historical path, we will start with a single experiment that forces us to think in a completely new way—the **Stern-Gerlach experiment**. This experiment shows, in the most dramatic fashion, why classical ideas must be abandoned. It also introduces the concept of **quantum states** as vectors in an abstract space, which is the foundation of quantum mechanics.
+
+
+### Symbol table (short)
+- |S_z; +> / |+>: spin up along z
+- |S_z; -> / |->: spin down along z
+- S_x, S_y, S_z: spin operators
+- ħ: reduced Planck constant
 
 ---
 
@@ -197,8 +210,8 @@ Once we have a basis $\{|a'\rangle\}$, we can represent everything as matrices a
     $$ \langle\alpha| \doteq (\langle\alpha|a^{(1)}\rangle, \langle\alpha|a^{(2)}\rangle, \langle\alpha|a^{(3)}\rangle, \dots) = (\langle a^{(1)}|\alpha\rangle^{*}, \langle a^{(2)}|\alpha\rangle^{*}, \langle a^{(3)}|\alpha\rangle^{*}, \dots) $$
 * **Representing an Operator $X$:** An operator is represented by a **square matrix**. The matrix element in the $a''$-th row and $a'$-th column is $\langle a''|X|a'\rangle$.
     $$ X \doteq \begin{pmatrix}
-    \langle a^{(1)}|X|a^{(1)}\rangle & \langle a^{(1)}|X|a^{(2)}\rangle & \cdots \\
-    \langle a^{(2)}|X|a^{(1)}\rangle & \langle a^{(2)}|X|a^{(2)}\rangle & \cdots \\
+    \langle a^{(1)}|X|a^{(1)}\rangle & \langle a^{(1)}|X|a^{(2)}\rangle & \cdots \
+    \langle a^{(2)}|X|a^{(1)}\rangle & \langle a^{(2)}|X|a^{(2)}\rangle & \cdots \
     \vdots & \vdots & \ddots
     \end{pmatrix} $$
 * **Matrix Multiplication:** With these representations, all the abstract algebra becomes standard matrix multiplication.
@@ -210,8 +223,8 @@ Once we have a basis $\{|a'\rangle\}$, we can represent everything as matrices a
     If we use the eigenkets of $A$ itself as the basis, the matrix representation of $A$ is beautifully simple: it's a **diagonal matrix** with its eigenvalues on the diagonal.
     $$ \langle a''|A|a'\rangle = a' \delta_{a''a'} $$
     $$ A \doteq \begin{pmatrix}
-    a^{(1)} & 0 & \cdots \\
-    0 & a^{(2)} & \cdots \\
+    a^{(1)} & 0 & \cdots \
+    0 & a^{(2)} & \cdots \
     \vdots & \vdots & \ddots
     \end{pmatrix} $$
     This means $A$ can be written as a sum of its eigenvalues times projection operators: $A = \sum_{a'} a' |a'\rangle\langle a'|$.
@@ -222,11 +235,11 @@ Let's make this concrete for the simplest quantum system: a spin-1/2 particle li
 
 * **Basis Kets:** We choose the $S_z$ eigenkets as our basis. We'll use the shorthand notation $|+\rangle$ for $S_z+$ and $|-\rangle$ for $S_z-$.
   * Orthonormality: $\langle + | + \rangle = 1$, $\langle - | - \rangle = 1$, $\langle + | - \rangle = 0$.
-  * Completeness: $|+\rangle\langle +| + |-\rangle\langle -| = \mathbb{1}$.
+  * Completeness: $|+\rangle\langle +| + |-|\rangle\langle -| = \mathbb{1}$.
 
 * **Matrix Representations:**
   * **Base Kets:**
-        $$ |+\rangle \doteq \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad |-\rangle \doteq \begin{pmatrix} 0 \\ 1 \end{pmatrix} $$
+        $$ |+\rangle \doteq \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad |-|\rangle \doteq \begin{pmatrix} 0 \\ 1 \end{pmatrix} $$
   * **$S_z$ Operator:** From $S_z = (\hbar/2)[(|+\rangle\langle +|) - (|-\rangle\langle -|)]$, its matrix is:
         $$ S_z \doteq \frac{\hbar}{2} \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} $$
   * **Ladder Operators $S_+$ and $S_-$:** These are non-Hermitian operators that "flip" the spin.
@@ -244,3 +257,8 @@ Let's make this concrete for the simplest quantum system: a spin-1/2 particle li
 * The **completeness relation** $\sum |a'\rangle\langle a'| = \mathbb{1}$ is a powerful tool for calculations.
 * By choosing a basis (e.g., the eigenkets of $S_z$), we can represent kets as column vectors, bras as row vectors, and operators as matrices. This turns abstract quantum mechanics into concrete linear algebra.
 * The spin-1/2 system provides a perfect, simple example of this entire mathematical framework.
+
+## References
+
+1. J. J. Sakurai, Modern Quantum Mechanics.
+2. Original Stern–Gerlach papers (1922).
